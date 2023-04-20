@@ -23,7 +23,7 @@ bussy_list = []
 count = 0
 new_bussy = ""
 newer_bussy = ""
-while count < 10:
+while count < 69420:
     in_file = open("/workspaces/codespaces-blank/Test/bussy.txt", "r")
     for line in in_file:
         bussy_list.append(line.strip())
