@@ -19,18 +19,31 @@ loop 69420 times
 """
 
 
-bussy_list = []
+import time
+
+bad_list = []
+time_list = []
 count = 0
-new_bussy = ""
-newer_bussy = ""
+new_bad = ""
+newer_bad = ""
+
 while count < 69420:
-    in_file = open("/workspaces/codespaces-blank/Test/bussy.txt", "r")
+    # start_time = time.time()
+    # if count > 0:
+    #   print(time_list[-1])
+
+    in_file = open("bad.txt", "r")
+
     for line in in_file:
-        bussy_list.append(line.strip())
-    for character in bussy_list:
-        new_bussy += character
-    bussy_list[0] = new_bussy
-    newer_bussy = bussy_list[0][0: len(bussy_list[0]) - (len(bussy_list[0]) - 5)]
-    print(newer_bussy)
+        bad_list.append(line.strip())
+        
+    for character in bad_list:
+        new_bad += character
+
+    bad_list[0] = new_bad
+    newer_bad = bad_list[0][0: len(bad_list[0]) - (len(bad_list[0]) - 5)]
+    print(newer_bad)
     count += 1
+    print(count)
     in_file.close()
+    # time_list.append((time.time() - start_time))
